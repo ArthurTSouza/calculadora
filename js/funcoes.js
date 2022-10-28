@@ -15,19 +15,21 @@ function calculadora(){
 function potenciacao(){
     num1= document.getElementById("num1").value;
     num2= document.getElementById("num2").value;
+    op= document.querySelector("input[name=opt]:checked").value;
 
-    rstd= eval (Math.pow(parseInt(num1),parseInt(num2)));
+    rstd= eval (op + "(" + (parseInt(num1),parseInt(num2))+")");
     document.getElementById("mostrar-resultado").innerHTML= rstd;
 }
 
 
-function triangulo(){
+/*function triangulo(){
     num1= document.getElementById("num1").value;
     num2= document.getElementById("num2").value;
 
+
     rstd= eval(parseInt(num1)*parseInt(num2))/2;
     document.getElementById("mostrar-resultado").innerHTML= rstd;
-}
+}*/
 
 
 /*function raiz(){
