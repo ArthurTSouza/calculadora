@@ -10,9 +10,15 @@ function calculadora(){
     op= document.querySelector("input[name=opt]:checked").value;
     rstd= eval(parseInt(num1) + op + parseInt(num2));
     document.getElementById("mostrar-resultado").innerHTML= rstd;
+
+
+    if( op= document.querySelector("input[name=opt]:checked").value=="Math.pow"){
+        rstd= eval (Math.pow(parseInt(num1),parseInt(num2)));
+        document.getElementById("mostrar-resultado").innerHTML= rstd;
+    }
 }
 
-function potenciacao(){
+/*function potenciacao(){
     num1= document.getElementById("num1").value;
     num2= document.getElementById("num2").value;
     op= document.querySelector("input[name=opt]:checked").value;
@@ -22,18 +28,17 @@ function potenciacao(){
 }
 
 
-/*function triangulo(){
+    function triangulo(){
     num1= document.getElementById("num1").value;
     num2= document.getElementById("num2").value;
 
-
     rstd= eval(parseInt(num1)*parseInt(num2))/2;
     document.getElementById("mostrar-resultado").innerHTML= rstd;
-}*/
+}
 
 
-/*function raiz(){
-    num1= document.getElementById("num1").value;
+function raiz(){
+   num1= document.getElementById("num1").value;
     num2= document.getElementById("num2").value;
 
     rstd= eval((parseInt(num1))+Math.sqrt(parseInt(num2)));
